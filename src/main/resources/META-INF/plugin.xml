@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.vnea.intellij.plugin.quickly-change-editor-font-size-preference</id>
+    <name>Quickly Change Editor Font Size Preference</name>
+    <vendor url="https://github.com/vnea">vnea</vendor>
+
+    <description>This plugin allows to quickly change editor font size preference.</description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
