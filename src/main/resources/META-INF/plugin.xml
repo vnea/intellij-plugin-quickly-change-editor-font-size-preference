@@ -21,5 +21,8 @@
         <action id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.DecreaseEditorFontSizeAction" class="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.DecreaseEditorFontSizeAction"
                 text="Decrease Editor Font Size Preference" description="Quickcly decrease editor font size preference">
         </action>
+        <action id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.ResetEditorFontSizeAction" class="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.ResetEditorFontSizeAction"
+                text="Reset Editor Font Size Preference" description="Quickcly reset editor font size preference">
+        </action>
     </actions>
 </idea-plugin>
