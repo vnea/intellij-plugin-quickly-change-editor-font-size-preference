@@ -3,7 +3,32 @@
     <name>Quickly Change Editor Font Size Preference</name>
     <vendor url="https://github.com/vnea">vnea</vendor>
 
-    <description>This plugin allows to quickly change editor font size preference.</description>
+    <description><![CDATA[
+        <p><b>This plugin allows to quickly change editor font size preference.</b></p>
+        <br>
+        <img src="https://raw.githubusercontent.com/vnea/intellij-plugin-quickly-change-editor-font-size-preference/master/doc/img/plugin_demo.gif" alt="plugin_demo">
+        <br/>
+        <br/>
+        <p>IntelliJ provides 3 default actions to change editor font size:</p>
+        <ul>
+            <li>Decrease Font Size</li>
+            <li>Increase Font Size</li>
+            <li>Reset Font Size</li>
+        </ul>
+        <p>However, the new font size is only applied to the current opened editor and not to all editors. Moreover, if
+            you close the affected editor and re-open it, the font size will also be reseted.</p>
+        <br/>
+        <p>This plugin provides 3 new actions which allows to quickly change editor font size preference <b>(File |
+            Settings | Editor | Font | Size)</b>:</p>
+        <ul>
+            <li>Increase Editor Font Size Preference</li>
+            <li>Decrease Editor Font Size Preference</li>
+            <li>Reset Editor Font Size Preference (reset value to 18 for the moment)</li>
+        </ul>
+        <p>It is possible to bind a shortcut for each action:</p>
+        <br>
+        <img src="https://raw.githubusercontent.com/vnea/intellij-plugin-quickly-change-editor-font-size-preference/master/doc/img/plugin_shorcuts.png" alt="plugin_shortcuts">
+        ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -15,14 +40,17 @@
 
     <actions>
         <!-- Add your actions here -->
-        <action id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.IncreaseEditorFontSizeAction" class="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.IncreaseEditorFontSizeAction"
-                text="Increase Editor Font Size Preference" description="Quickcly increase editor font size preference">
+        <action id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.IncreaseEditorFontSizeAction"
+                class="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.IncreaseEditorFontSizeAction"
+                text="Increase Editor Font Size Preference">
         </action>
-        <action id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.DecreaseEditorFontSizeAction" class="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.DecreaseEditorFontSizeAction"
-                text="Decrease Editor Font Size Preference" description="Quickcly decrease editor font size preference">
+        <action id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.DecreaseEditorFontSizeAction"
+                class="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.DecreaseEditorFontSizeAction"
+                text="Decrease Editor Font Size Preference">
         </action>
-        <action id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.ResetEditorFontSizeAction" class="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.ResetEditorFontSizeAction"
-                text="Reset Editor Font Size Preference" description="Quickcly reset editor font size preference">
+        <action id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.ResetEditorFontSizeAction"
+                class="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.action.ResetEditorFontSizeAction"
+                text="Reset Editor Font Size Preference">
         </action>
     </actions>
 </idea-plugin>
