@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.vnea.intellij.plugin'
-version '1.0'
+version '1.0.0'
 
 repositories {
     mavenCentral()
@@ -28,8 +28,13 @@ compileTestKotlin {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      <h3>1.0.0</h3>
+      <ul>
+        <li><b>NEW</b>: Add action <b>Increase Editor Font Size Preference</b> to quickcly increase editor font size preference with keyboard shortcut.</li>
+        <li><b>NEW</b>: Add action <b>Decrease Editor Font Size Preference</b> to quickcly decrease editor font size preference with keyboard shortcut.</li>
+        <li><b>NEW</b>: Add action <b>Reset Editor Font Size Preference</b> to quickcly reset editor font size preference with keyboard shortcut.</li>
+      <ul/>
+      """
 }
 publishPlugin {
     token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
