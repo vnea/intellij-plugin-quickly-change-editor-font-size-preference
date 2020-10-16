@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.vnea.intellij.plugin'
-version '1.0.0'
+version '1.1.0'
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2020.1.1'
+    version '2020.2.3'
 }
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
@@ -28,11 +28,11 @@ compileTestKotlin {
 }
 patchPluginXml {
     changeNotes """
-      <h3>1.0.0</h3>
+      <h3>1.1.0</h3>
       <ul>
-        <li><b>NEW</b>: Add action <b>Increase Editor Font Size Preference</b> to quickcly increase editor font size preference with keyboard shortcut.</li>
-        <li><b>NEW</b>: Add action <b>Decrease Editor Font Size Preference</b> to quickcly decrease editor font size preference with keyboard shortcut.</li>
-        <li><b>NEW</b>: Add action <b>Reset Editor Font Size Preference</b> to quickcly reset editor font size preference with keyboard shortcut.</li>
+        <li><b>NEW</b>: Set default font size to 12 instead of 18.</li>
+        <li><b>NEW</b>: Add ability to set default font size editor preference for reset action (Settings > Tools > Quickly Change Editor Font Size Preference).</li>
+        <li><b>NEW</b>: Make plugin compatible until IntelliJ IDEA 2020.2.3.</li>
       <ul/>
       """
 }

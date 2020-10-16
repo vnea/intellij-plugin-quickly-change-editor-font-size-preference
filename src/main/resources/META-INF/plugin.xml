@@ -24,7 +24,7 @@
         <ul>
             <li>Increase Editor Font Size Preference</li>
             <li>Decrease Editor Font Size Preference</li>
-            <li>Reset Editor Font Size Preference (reset value to 18 for the moment)</li>
+            <li>Reset Editor Font Size Preference (default value is 12, can be changed in Settings > Tools > Quickly Change Editor Font Size Preference)</li>
         </ul>
         <p>It is possible to bind a shortcut for each action:</p>
         <br>
