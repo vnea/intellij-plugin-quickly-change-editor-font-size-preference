@@ -6,7 +6,14 @@ import com.intellij.openapi.editor.colors.impl.AppEditorFontOptions
 import com.intellij.openapi.editor.colors.impl.FontPreferencesImpl
 
 class AppEditorFontPreferences {
+
     private val fontPreferences = AppEditorFontOptions.getInstance().fontPreferences as FontPreferencesImpl
+
+    companion object {
+        val DEFAULT_FONT_SIZE = EditorFontsConstants.getDefaultEditorFontSize()
+        val MIN_FONT_SIZE = EditorFontsConstants.getMinEditorFontSize()
+        val MAX_FONT_SIZE = EditorFontsConstants.getMaxEditorFontSize()
+    }
 
     fun setFontSize(fontSize: Int) {
         if (isEditorFontSizeAllowed(fontSize)) {
@@ -22,7 +29,6 @@ class AppEditorFontPreferences {
         setFontSize(newFontSize)
     }
 
-    private fun isEditorFontSizeAllowed(fontSize: Int) =
-        fontSize >= EditorFontsConstants.getMinEditorFontSize() && fontSize <= EditorFontsConstants.getMaxEditorFontSize()
+    fun isEditorFontSizeAllowed(fontSize: Int) = fontSize in MIN_FONT_SIZE..MAX_FONT_SIZE
 
 }
