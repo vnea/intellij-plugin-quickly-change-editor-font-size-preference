@@ -23,7 +23,7 @@ class QuicklyChangeEditorFontSizePreferenceConfigurable : Configurable {
     override fun isModified() =
         isDefaultFontSizeEditorValid() && pluginService.defaultFontSizeEditor.toString() != defaultFontSizeField.text
 
-    override fun createComponent(): JComponent? {
+    override fun createComponent(): JComponent {
         val rootPanel = JPanel(FlowLayout(FlowLayout.LEFT))
 
         val defaultFontSizeLabel = JLabel(
