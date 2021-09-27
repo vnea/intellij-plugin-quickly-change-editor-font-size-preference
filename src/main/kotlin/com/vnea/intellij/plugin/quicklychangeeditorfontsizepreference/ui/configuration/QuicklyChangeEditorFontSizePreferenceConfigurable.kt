@@ -1,6 +1,6 @@
 package com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.ui.configuration
 
-import com.intellij.openapi.components.ServiceManager
+import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.options.Configurable
 import com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.service.QuicklyChangeEditorFontSizePreferenceService
 import com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.wrapper.AppEditorFontPreferences
@@ -13,7 +13,8 @@ import javax.swing.JTextField
 class QuicklyChangeEditorFontSizePreferenceConfigurable : Configurable {
 
     private val appEditorFontPreferences = AppEditorFontPreferences()
-    private val pluginService = ServiceManager.getService(QuicklyChangeEditorFontSizePreferenceService::class.java)
+    private val pluginService =
+        ApplicationManager.getApplication().getService(QuicklyChangeEditorFontSizePreferenceService::class.java)
 
     private val defaultFontSizeField = JTextField(pluginService.defaultFontSizeEditor)
 
