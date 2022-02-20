@@ -1,6 +1,7 @@
 package com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.model
 
 import kotlin.math.max
+import kotlin.math.min
 
 class ChangeEditorFontSize(private val min: Int = 4, private val max: Int = 40, fontSize: Int) {
     var fontSize: Int
@@ -18,5 +19,9 @@ class ChangeEditorFontSize(private val min: Int = 4, private val max: Int = 40, 
 
     fun decreaseFontSizeBy(decreaseFactor: Int) {
         fontSize = max(min, fontSize - decreaseFactor)
+    }
+
+    fun increaseFontSizeBy(increaseFactor: Int) {
+        fontSize = min(max, fontSize + increaseFactor)
     }
 }

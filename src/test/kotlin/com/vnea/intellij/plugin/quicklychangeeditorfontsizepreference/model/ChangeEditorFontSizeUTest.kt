@@ -71,4 +71,33 @@ internal class ChangeEditorFontSizeUTest {
         // Then
         assertEquals(min, changeEditorFontSize.fontSize)
     }
+
+    @Test
+    fun `increaseFontSizeBy SHOULD increase the font size by the increase factor`() {
+        // Given
+        val increaseFactor = 2
+        val fontSize = 10
+        val changeEditorFontSize = ChangeEditorFontSize(fontSize = fontSize)
+
+        // When
+        changeEditorFontSize.increaseFontSizeBy(increaseFactor)
+
+        // Then
+        assertEquals(12, changeEditorFontSize.fontSize)
+    }
+
+    @Test
+    fun `increaseFontSizeBy SHOULD set font size to max WHEN font size would be superior to max`() {
+        // Given
+        val increaseFactor = 2
+        val max = 40
+        val fontSize = 39
+        val changeEditorFontSize = ChangeEditorFontSize(max = max, fontSize = fontSize)
+
+        // When
+        changeEditorFontSize.increaseFontSizeBy(increaseFactor)
+
+        // Then
+        assertEquals(max, changeEditorFontSize.fontSize)
+    }
 }
