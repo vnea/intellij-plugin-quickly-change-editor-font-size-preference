@@ -42,4 +42,33 @@ internal class ChangeEditorFontSizeUTest {
         // Then
         assertEquals(max, changeEditorFontSize.fontSize)
     }
+
+    @Test
+    fun `decreaseFontSizeBy SHOULD decrease the font size by the decrease factor`() {
+        // Given
+        val decreaseFactor = 2
+        val fontSize = 10
+        val changeEditorFontSize = ChangeEditorFontSize(fontSize = fontSize)
+
+        // When
+        changeEditorFontSize.decreaseFontSizeBy(decreaseFactor)
+
+        // Then
+        assertEquals(8, changeEditorFontSize.fontSize)
+    }
+
+    @Test
+    fun `decreaseFontSizeBy SHOULD set font size to min WHEN font size would be inferior to min`() {
+        // Given
+        val decreaseFactor = 2
+        val min = 4
+        val fontSize = 5
+        val changeEditorFontSize = ChangeEditorFontSize(min = min, fontSize = fontSize)
+
+        // When
+        changeEditorFontSize.decreaseFontSizeBy(decreaseFactor)
+
+        // Then
+        assertEquals(min, changeEditorFontSize.fontSize)
+    }
 }
