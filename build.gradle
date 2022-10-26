@@ -1,14 +1,14 @@
 plugins {
     id 'java'
-    id "org.jetbrains.kotlin.jvm" version "1.5.31"
-    id "org.jetbrains.intellij" version "1.5.2"
+    id "org.jetbrains.kotlin.jvm" version "1.7.20"
+    id "org.jetbrains.intellij" version "1.9.0"
 }
 
 apply plugin: "kotlin"
 apply plugin: "org.jetbrains.intellij"
 
-def intellijVersion = '2022.1'
-def pluginVersion = '1.1.5'
+def intellijVersion = '2022.2'
+def pluginVersion = '1.1.6'
 
 group 'com.vnea.intellij.plugin'
 version pluginVersion
@@ -41,6 +41,7 @@ patchPluginXml {
         """
       <h3>${pluginVersion}</h3>
       <ul>
+        <li><b>NOTE</b>: This 1.1.6 version might be the last one.</li>
         <li><b>NEW</b>: Make plugin compatible until IntelliJ IDEA ${intellijVersion}.x.</li>
       <ul/>
       """

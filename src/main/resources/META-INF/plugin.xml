@@ -4,6 +4,8 @@
     <vendor url="https://github.com/vnea">vnea</vendor>
 
     <description><![CDATA[
+        <h1><b>[PLUGIN NOT MAINTAINED ANYMORE] Since Intellij 2022.2, this feature is now built-in. You should use the build-in feature instead by following <a href="https://www.jetbrains.com/help/rider/Zooming_in_the_Editor.html#use-ctrl-cmd-mouse-wheel-to-change-font-size-for-all-documents">these instructions</a>.</h1>
+
         <p><b>This plugin allows to quickly change editor font size preference.</b></p>
         <br>
         <img src="https://raw.githubusercontent.com/vnea/intellij-plugin-quickly-change-editor-font-size-preference/master/doc/img/plugin_demo.gif"
@@ -16,6 +18,7 @@
             <li>Increase Font Size</li>
             <li>Reset Font Size</li>
         </ul>
+
         <p>However, the new font size is only applied to the current opened editor and not to all editors. Moreover, if
             you close the affected editor and re-open it, the font size will also be reseted.</p>
         <br/>
@@ -26,6 +29,7 @@
             <li>Decrease Editor Font Size Preference</li>
             <li>Reset Editor Font Size Preference (default value is 12, can be changed in Settings > Tools > Quickly Change Editor Font Size Preference)</li>
         </ul>
+
         <p>It is possible to bind a shortcut for each action:</p>
         <br>
         <img src="https://raw.githubusercontent.com/vnea/intellij-plugin-quickly-change-editor-font-size-preference/master/doc/img/plugin_shorcuts.png"
@@ -39,10 +43,11 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <applicationConfigurable parentId="tools"
-                             instance="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.ui.configuration.QuicklyChangeEditorFontSizePreferenceConfigurable"
-                             id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.ui.configuration.QuicklyChangeEditorFontSizePreferenceConfigurable"
+                                 instance="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.ui.configuration.QuicklyChangeEditorFontSizePreferenceConfigurable"
+                                 id="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.ui.configuration.QuicklyChangeEditorFontSizePreferenceConfigurable"
         />
-        <applicationService serviceImplementation="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.service.QuicklyChangeEditorFontSizePreferenceService"/>
+        <applicationService
+                serviceImplementation="com.vnea.intellij.plugin.quicklychangeeditorfontsizepreference.service.QuicklyChangeEditorFontSizePreferenceService"/>
     </extensions>
 
     <actions>
